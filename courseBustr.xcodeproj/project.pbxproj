@@ -21,6 +21,8 @@
 		4A9A5350186F433D0067F415 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9A5332186F433D0067F415 /* UIKit.framework */; };
 		4A9A5358186F433D0067F415 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4A9A5356186F433D0067F415 /* InfoPlist.strings */; };
 		4A9A535A186F433D0067F415 /* courseBustrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9A5359186F433D0067F415 /* courseBustrTests.m */; };
+		4A9A5366186F45A00067F415 /* CBCourseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9A5365186F45A00067F415 /* CBCourseModel.m */; };
+		4A9A5369186F48440067F415 /* CBDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9A5368186F48440067F415 /* CBDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		4A9A5355186F433D0067F415 /* courseBustrTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "courseBustrTests-Info.plist"; sourceTree = "<group>"; };
 		4A9A5357186F433D0067F415 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4A9A5359186F433D0067F415 /* courseBustrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = courseBustrTests.m; sourceTree = "<group>"; };
+		4A9A5364186F45A00067F415 /* CBCourseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBCourseModel.h; sourceTree = "<group>"; };
+		4A9A5365186F45A00067F415 /* CBCourseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBCourseModel.m; sourceTree = "<group>"; };
+		4A9A5367186F48440067F415 /* CBDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBDetailViewController.h; sourceTree = "<group>"; };
+		4A9A5368186F48440067F415 /* CBDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +118,11 @@
 		4A9A5334186F433D0067F415 /* courseBustr */ = {
 			isa = PBXGroup;
 			children = (
+				4A9A536A186F527D0067F415 /* ViewControllers */,
+				4A9A5363186F45A00067F415 /* Model */,
 				4A9A533D186F433D0067F415 /* CBAppDelegate.h */,
 				4A9A533E186F433D0067F415 /* CBAppDelegate.m */,
 				4A9A5340186F433D0067F415 /* Main.storyboard */,
-				4A9A5343186F433D0067F415 /* CBViewController.h */,
-				4A9A5344186F433D0067F415 /* CBViewController.m */,
 				4A9A5346186F433D0067F415 /* Images.xcassets */,
 				4A9A5335186F433D0067F415 /* Supporting Files */,
 			);
@@ -150,6 +156,26 @@
 				4A9A5356186F433D0067F415 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4A9A5363186F45A00067F415 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4A9A5364186F45A00067F415 /* CBCourseModel.h */,
+				4A9A5365186F45A00067F415 /* CBCourseModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4A9A536A186F527D0067F415 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4A9A5343186F433D0067F415 /* CBViewController.h */,
+				4A9A5344186F433D0067F415 /* CBViewController.m */,
+				4A9A5367186F48440067F415 /* CBDetailViewController.h */,
+				4A9A5368186F48440067F415 /* CBDetailViewController.m */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +277,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A9A533B186F433D0067F415 /* main.m in Sources */,
+				4A9A5366186F45A00067F415 /* CBCourseModel.m in Sources */,
+				4A9A5369186F48440067F415 /* CBDetailViewController.m in Sources */,
 				4A9A533F186F433D0067F415 /* CBAppDelegate.m in Sources */,
 				4A9A5345186F433D0067F415 /* CBViewController.m in Sources */,
 			);
