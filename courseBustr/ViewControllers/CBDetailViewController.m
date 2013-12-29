@@ -40,4 +40,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)onButtonEdit:(id)sender
+{
+    NSLog(@"%@", self.courseCID);
+}
+
 @end

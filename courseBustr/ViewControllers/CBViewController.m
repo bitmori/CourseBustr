@@ -86,6 +86,9 @@
 //                            ];
 //    [message show];
     CBDetailViewController* detail = [self.storyboard instantiateViewControllerWithIdentifier:@"detailView"];
+    UIBarButtonItem* editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:detail action:@selector(onButtonEdit:)];
+    detail.navigationItem.rightBarButtonItem = editButton;
+    detail.title = @"Detail";
     detail.courseName = course.name;
     detail.courseCID = course.CID;
     detail.courseCRN = course.CRN;
@@ -105,6 +108,30 @@
     for (NSArray* item in _dataArray) {
         CBCourseModel* course = [[CBCourseModel alloc] initWithCRN:[item[0] integerValue] CID:item[1] Name:item[2]];
         [_courseList addObject:course];
+    }
+}
+
+#pragma mark - CBAddItemViewControllerDelegate
+
+- (void)addItemViewControllerDidCancel:(CBAddItemViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)addItemViewControllerDidDone:(CBAddItemViewController *)controller withCourseModel:(CBCourseModel *)course
+{
+    [_courseList addObject:course];
+    NSIndexPath* indexPath = [NSIndexPath indexPathForRow:[_courseList count]-1 inSection:0];
+    [self.tableCourse insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"addCourse"]) {
+        UINavigationController* navController = segue.destinationViewController;
+        CBAddItemViewController* addController = [[navController viewControllers] objectAtIndex:0];
+        addController.delegate = self;
     }
 }
 

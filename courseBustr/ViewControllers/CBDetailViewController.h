@@ -17,4 +17,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelCRN;
 @property (weak, nonatomic) IBOutlet UILabel *labelName;
 
+- (IBAction)onButtonEdit:(id)sender;
+
 @end

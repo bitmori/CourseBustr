@@ -23,6 +23,7 @@
 		4A9A535A186F433D0067F415 /* courseBustrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9A5359186F433D0067F415 /* courseBustrTests.m */; };
 		4A9A5366186F45A00067F415 /* CBCourseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9A5365186F45A00067F415 /* CBCourseModel.m */; };
 		4A9A5369186F48440067F415 /* CBDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9A5368186F48440067F415 /* CBDetailViewController.m */; };
+		4AA13759186FEC520054E742 /* CBAddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA13758186FEC520054E742 /* CBAddItemViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		4A9A5365186F45A00067F415 /* CBCourseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBCourseModel.m; sourceTree = "<group>"; };
 		4A9A5367186F48440067F415 /* CBDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBDetailViewController.h; sourceTree = "<group>"; };
 		4A9A5368186F48440067F415 /* CBDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDetailViewController.m; sourceTree = "<group>"; };
+		4AA13757186FEC520054E742 /* CBAddItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAddItemViewController.h; sourceTree = "<group>"; };
+		4AA13758186FEC520054E742 /* CBAddItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAddItemViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +177,8 @@
 				4A9A5344186F433D0067F415 /* CBViewController.m */,
 				4A9A5367186F48440067F415 /* CBDetailViewController.h */,
 				4A9A5368186F48440067F415 /* CBDetailViewController.m */,
+				4AA13757186FEC520054E742 /* CBAddItemViewController.h */,
+				4AA13758186FEC520054E742 /* CBAddItemViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AA13759186FEC520054E742 /* CBAddItemViewController.m in Sources */,
 				4A9A533B186F433D0067F415 /* main.m in Sources */,
 				4A9A5366186F45A00067F415 /* CBCourseModel.m in Sources */,
 				4A9A5369186F48440067F415 /* CBDetailViewController.m in Sources */,
@@ -489,6 +495,7 @@
 				4A9A535F186F433D0067F415 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A9A5360186F433D0067F415 /* Build configuration list for PBXNativeTarget "courseBustrTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +504,7 @@
 				4A9A5362186F433D0067F415 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
