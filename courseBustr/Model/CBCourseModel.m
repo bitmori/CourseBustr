@@ -16,6 +16,7 @@
         self.CRN = CRN;
         self.CID = CID;
         self.name = name;
+        self.color = @"";
     }
     return self;
 }

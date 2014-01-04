@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "CBAddItemViewController.h"
+#import "CBDetailViewController.h"
 
-@interface CBViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, CBAddItemViewControllerDelegate>
+@interface CBViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, CBAddItemViewControllerDelegate, CBDetailViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableCourse;
 
 @end

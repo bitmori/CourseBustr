@@ -24,6 +24,10 @@
 		4A9A5366186F45A00067F415 /* CBCourseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9A5365186F45A00067F415 /* CBCourseModel.m */; };
 		4A9A5369186F48440067F415 /* CBDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9A5368186F48440067F415 /* CBDetailViewController.m */; };
 		4AA13759186FEC520054E742 /* CBAddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA13758186FEC520054E742 /* CBAddItemViewController.m */; };
+		4AA1375C187016670054E742 /* CBEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA1375B187016670054E742 /* CBEditViewController.m */; };
+		4AA1375F18709E180054E742 /* CBDataSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA1375E18709E180054E742 /* CBDataSingleton.m */; };
+		4AA137631871FE750054E742 /* CBCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA137621871FE750054E742 /* CBCircleButton.m */; };
+		4AC095701877A14C00D18DC0 /* CBPageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC0956F1877A14C00D18DC0 /* CBPageContentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +66,14 @@
 		4A9A5368186F48440067F415 /* CBDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDetailViewController.m; sourceTree = "<group>"; };
 		4AA13757186FEC520054E742 /* CBAddItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAddItemViewController.h; sourceTree = "<group>"; };
 		4AA13758186FEC520054E742 /* CBAddItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAddItemViewController.m; sourceTree = "<group>"; };
+		4AA1375A187016670054E742 /* CBEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBEditViewController.h; sourceTree = "<group>"; };
+		4AA1375B187016670054E742 /* CBEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBEditViewController.m; sourceTree = "<group>"; };
+		4AA1375D18709E180054E742 /* CBDataSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBDataSingleton.h; sourceTree = "<group>"; };
+		4AA1375E18709E180054E742 /* CBDataSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDataSingleton.m; sourceTree = "<group>"; };
+		4AA137611871FE750054E742 /* CBCircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBCircleButton.h; sourceTree = "<group>"; };
+		4AA137621871FE750054E742 /* CBCircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBCircleButton.m; sourceTree = "<group>"; };
+		4AC0956E1877A14C00D18DC0 /* CBPageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPageContentViewController.h; sourceTree = "<group>"; };
+		4AC0956F1877A14C00D18DC0 /* CBPageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPageContentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,10 +133,13 @@
 		4A9A5334186F433D0067F415 /* courseBustr */ = {
 			isa = PBXGroup;
 			children = (
+				4AA137601871FE4D0054E742 /* CustomViews */,
 				4A9A536A186F527D0067F415 /* ViewControllers */,
 				4A9A5363186F45A00067F415 /* Model */,
 				4A9A533D186F433D0067F415 /* CBAppDelegate.h */,
 				4A9A533E186F433D0067F415 /* CBAppDelegate.m */,
+				4AA1375D18709E180054E742 /* CBDataSingleton.h */,
+				4AA1375E18709E180054E742 /* CBDataSingleton.m */,
 				4A9A5340186F433D0067F415 /* Main.storyboard */,
 				4A9A5346186F433D0067F415 /* Images.xcassets */,
 				4A9A5335186F433D0067F415 /* Supporting Files */,
@@ -179,8 +194,21 @@
 				4A9A5368186F48440067F415 /* CBDetailViewController.m */,
 				4AA13757186FEC520054E742 /* CBAddItemViewController.h */,
 				4AA13758186FEC520054E742 /* CBAddItemViewController.m */,
+				4AA1375A187016670054E742 /* CBEditViewController.h */,
+				4AA1375B187016670054E742 /* CBEditViewController.m */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4AA137601871FE4D0054E742 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				4AA137611871FE750054E742 /* CBCircleButton.h */,
+				4AA137621871FE750054E742 /* CBCircleButton.m */,
+				4AC0956E1877A14C00D18DC0 /* CBPageContentViewController.h */,
+				4AC0956F1877A14C00D18DC0 /* CBPageContentViewController.m */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,11 +309,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AA1375C187016670054E742 /* CBEditViewController.m in Sources */,
 				4AA13759186FEC520054E742 /* CBAddItemViewController.m in Sources */,
 				4A9A533B186F433D0067F415 /* main.m in Sources */,
+				4AA137631871FE750054E742 /* CBCircleButton.m in Sources */,
+				4AC095701877A14C00D18DC0 /* CBPageContentViewController.m in Sources */,
 				4A9A5366186F45A00067F415 /* CBCourseModel.m in Sources */,
 				4A9A5369186F48440067F415 /* CBDetailViewController.m in Sources */,
 				4A9A533F186F433D0067F415 /* CBAppDelegate.m in Sources */,
+				4AA1375F18709E180054E742 /* CBDataSingleton.m in Sources */,
 				4A9A5345186F433D0067F415 /* CBViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

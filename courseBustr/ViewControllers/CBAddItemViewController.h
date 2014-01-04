@@ -27,5 +27,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *fieldCID;
 @property (weak, nonatomic) IBOutlet UITextField *fieldCRN;
 @property (weak, nonatomic) IBOutlet UITextField *fieldName;
+- (IBAction)onColorSelButton:(id)sender;
 
 @end

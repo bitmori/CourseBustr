@@ -8,15 +8,11 @@
 
 #import "CBViewController.h"
 #import "CBCourseModel.h"
+#import "CBDataSingleton.h"
 #import "CBDetailViewController.h"
 
 @interface CBViewController ()
-{
-    NSArray* _dataArray;
-    NSMutableArray* _courseList;
-}
 
-- (void)generateData;
 @end
 
 @implementation CBViewController
@@ -24,19 +20,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //[self generateData];
-    _dataArray = @[@[@31152, @"CS 125", @"Intro to Computer Science"],
-                   @[@39311, @"CS 173", @"Discrete Structures"],
-                   @[@31208, @"CS 225", @"Data Structures"],
-                   @[@58541, @"CS 233", @"Computer Architecture"],
-                   @[@53753, @"CS 241", @"System Programming"],
+    NSArray* _dataArray = @[@[@31152, @"CS 125", @"Intro to Computer Science"],
+                   //@[@39311, @"CS 173", @"Discrete Structures"],
+                   //@[@31208, @"CS 225", @"Data Structures"],
+                   //@[@58541, @"CS 233", @"Computer Architecture"],
+                   //@[@53753, @"CS 241", @"System Programming"],
                    @[@50142, @"CS 373", @"Theory of Computation"]
                    ];
-    _courseList = [[NSMutableArray alloc] init];
+    CBDataSingleton* sharedData = [CBDataSingleton sharedData];
     for (NSArray* item in _dataArray) {
         CBCourseModel* course = [[CBCourseModel alloc] initWithCRN:[item[0] integerValue] CID:item[1] Name:item[2]];
-        [_courseList addObject:course];
+        [sharedData.courseList addObject:course];
     }
+    //self.navigationItem.rightBarButtonItems
 }
 
 - (void)didReceiveMemoryWarning
@@ -52,7 +48,8 @@
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [_courseList count];
+    CBDataSingleton* sharedData = [CBDataSingleton sharedData];
+    return [sharedData.courseList count];
 }
 
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -64,51 +61,18 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:courseCell];
     }
 
-    CBCourseModel* course = _courseList[indexPath.row];
+    CBDataSingleton* sharedData = [CBDataSingleton sharedData];
+    CBCourseModel* course = sharedData.courseList[indexPath.row];
     UILabel* labelCID = (UILabel *)[cell viewWithTag:101];
     [labelCID setText:course.CID];
     UILabel* labelCRN = (UILabel *)[cell viewWithTag:102];
     [labelCRN setText:[NSString stringWithFormat:@"%d", course.CRN]];
     UILabel* labelName = (UILabel *)[cell viewWithTag:103];
     [labelName setText:course.name];
+    UILabel* labelColor = (UILabel *)[cell viewWithTag:104];
+    [labelColor setBackgroundColor:[UIColor redColor]];
     
     return cell;
-}
-
-- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    CBCourseModel* course = _courseList[indexPath.row];
-//    UIAlertView* message = [[UIAlertView alloc] initWithTitle:@"TableView"
-//                                                      message:course.name
-//                                                     delegate:nil
-//                                            cancelButtonTitle:@"OK"
-//                                            otherButtonTitles:nil
-//                            ];
-//    [message show];
-    CBDetailViewController* detail = [self.storyboard instantiateViewControllerWithIdentifier:@"detailView"];
-    UIBarButtonItem* editButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:detail action:@selector(onButtonEdit:)];
-    detail.navigationItem.rightBarButtonItem = editButton;
-    detail.title = @"Detail";
-    detail.courseName = course.name;
-    detail.courseCID = course.CID;
-    detail.courseCRN = course.CRN;
-    [self.navigationController pushViewController:detail animated:YES];
-}
-
-- (void)generateData
-{
-    _dataArray = @[@[@31152, @"CS 125", @"Intro to Computer Science"],
-                   @[@39311, @"CS 173", @"Discrete Structures"],
-                   @[@31208, @"CS 225", @"Data Structures"],
-                   @[@58541, @"CS 233", @"Computer Architecture"],
-                   @[@53753, @"CS 241", @"System Programming"],
-                   @[@50142, @"CS 373", @"Theory of Computation"]
-                   ];
-    _courseList = [[NSMutableArray alloc] init];
-    for (NSArray* item in _dataArray) {
-        CBCourseModel* course = [[CBCourseModel alloc] initWithCRN:[item[0] integerValue] CID:item[1] Name:item[2]];
-        [_courseList addObject:course];
-    }
 }
 
 #pragma mark - CBAddItemViewControllerDelegate
@@ -120,8 +84,9 @@
 
 - (void)addItemViewControllerDidDone:(CBAddItemViewController *)controller withCourseModel:(CBCourseModel *)course
 {
-    [_courseList addObject:course];
-    NSIndexPath* indexPath = [NSIndexPath indexPathForRow:[_courseList count]-1 inSection:0];
+    CBDataSingleton* sharedData = [CBDataSingleton sharedData];
+    [sharedData.courseList addObject:course];
+    NSIndexPath* indexPath = [NSIndexPath indexPathForRow:[sharedData.courseList count]-1 inSection:0];
     [self.tableCourse insertRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -132,7 +97,20 @@
         UINavigationController* navController = segue.destinationViewController;
         CBAddItemViewController* addController = [[navController viewControllers] objectAtIndex:0];
         addController.delegate = self;
+    } else if ([segue.identifier isEqualToString:@"segueToDetailView"]) {
+        NSIndexPath *indexPath = [self.tableCourse indexPathForSelectedRow];
+        UINavigationController* navController = segue.destinationViewController;
+        CBDetailViewController *detail = [[navController viewControllers] objectAtIndex:0];
+        //CBDataSingleton* sharedData = [CBDataSingleton sharedData];
+        //CBCourseModel* course = sharedData.courseList[indexPath.row];
+        detail.row = indexPath.row;
+        detail.delegate = self;
     }
+}
+
+- (void)updateCellAtRow:(NSInteger)row
+{
+    [self.tableCourse reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:row inSection:0]] withRowAnimation:UITableViewRowAnimationRight];
 }
 
 @end

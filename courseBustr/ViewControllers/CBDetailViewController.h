@@ -7,15 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CBEditViewController.h"
 
-@interface CBDetailViewController : UIViewController
+@class CBViewController;
+@protocol CBDetailViewControllerDelegate <NSObject>
 
-@property (copy, nonatomic) NSString* courseName;
-@property (copy, nonatomic) NSString* courseCID;
-@property (assign, nonatomic) NSInteger courseCRN;
-@property (weak, nonatomic) IBOutlet UILabel *labelCID;
-@property (weak, nonatomic) IBOutlet UILabel *labelCRN;
-@property (weak, nonatomic) IBOutlet UILabel *labelName;
+- (void)updateCellAtRow:(NSInteger)row;
+
+@end
+
+@interface CBDetailViewController : UIViewController<CBEditViewControllerDelegate, UIPageViewControllerDataSource>
+
+@property (weak, nonatomic) id<CBDetailViewControllerDelegate> delegate;
+
+@property (assign, nonatomic) NSInteger row;
+
+@property (strong, nonatomic) UIPageViewController* pageViewController;
+
+@property (strong, nonatomic) NSArray* pageContentID;
 
 - (IBAction)onButtonEdit:(id)sender;
 

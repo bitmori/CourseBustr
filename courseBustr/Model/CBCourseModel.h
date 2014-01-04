@@ -13,6 +13,7 @@
 @property (nonatomic, assign) NSInteger CRN;
 @property (nonatomic, copy) NSString* CID;
 @property (nonatomic, copy) NSString* name;
+@property (nonatomic, copy) NSString* color;
 
 - (id) initWithCRN:(NSInteger)CRN CID:(NSString*)CID Name:(NSString*)name;
 //@property (nonatomic, copy) NSString* dept;
