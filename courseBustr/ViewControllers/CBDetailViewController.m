@@ -59,11 +59,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)onButtonEdit:(id)sender
-{
-//    [self performSegueWithIdentifier:@"editCourse" sender:self];
-}
-
 - (void)editViewControllerDidCancel:(id)controller
 {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -101,6 +96,7 @@
     }
     CBPageContentViewController* pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:self.pageContentID[index]];
     pageContentViewController.pageIndex = index;
+    pageContentViewController.row = self.row;
     return pageContentViewController;
 }
 

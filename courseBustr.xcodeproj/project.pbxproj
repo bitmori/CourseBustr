@@ -28,6 +28,13 @@
 		4AA1375F18709E180054E742 /* CBDataSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA1375E18709E180054E742 /* CBDataSingleton.m */; };
 		4AA137631871FE750054E742 /* CBCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA137621871FE750054E742 /* CBCircleButton.m */; };
 		4AC095701877A14C00D18DC0 /* CBPageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC0956F1877A14C00D18DC0 /* CBPageContentViewController.m */; };
+		4AC095731877AAED00D18DC0 /* CBInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC095721877AAED00D18DC0 /* CBInfoViewController.m */; };
+		4AC095761877AAF700D18DC0 /* CBChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC095751877AAF700D18DC0 /* CBChartViewController.m */; };
+		4AC095791877AAFF00D18DC0 /* CBListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC095781877AAFF00D18DC0 /* CBListViewController.m */; };
+		4AC095871878B18800D18DC0 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC095861878B18800D18DC0 /* SWRevealViewController.m */; };
+		4AC0958A1878BA8E00D18DC0 /* CBRevealMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC095891878BA8E00D18DC0 /* CBRevealMenuViewController.m */; };
+		4AC0958D1878E02C00D18DC0 /* CBProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC0958C1878E02C00D18DC0 /* CBProfileViewController.m */; };
+		4AC095911878E3EC00D18DC0 /* CBSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC095901878E3EC00D18DC0 /* CBSettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,12 +75,26 @@
 		4AA13758186FEC520054E742 /* CBAddItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAddItemViewController.m; sourceTree = "<group>"; };
 		4AA1375A187016670054E742 /* CBEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBEditViewController.h; sourceTree = "<group>"; };
 		4AA1375B187016670054E742 /* CBEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBEditViewController.m; sourceTree = "<group>"; };
-		4AA1375D18709E180054E742 /* CBDataSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBDataSingleton.h; sourceTree = "<group>"; };
-		4AA1375E18709E180054E742 /* CBDataSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDataSingleton.m; sourceTree = "<group>"; };
+		4AA1375D18709E180054E742 /* CBDataSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBDataSingleton.h; path = ../CBDataSingleton.h; sourceTree = "<group>"; };
+		4AA1375E18709E180054E742 /* CBDataSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBDataSingleton.m; path = ../CBDataSingleton.m; sourceTree = "<group>"; };
 		4AA137611871FE750054E742 /* CBCircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBCircleButton.h; sourceTree = "<group>"; };
 		4AA137621871FE750054E742 /* CBCircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBCircleButton.m; sourceTree = "<group>"; };
 		4AC0956E1877A14C00D18DC0 /* CBPageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPageContentViewController.h; sourceTree = "<group>"; };
 		4AC0956F1877A14C00D18DC0 /* CBPageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPageContentViewController.m; sourceTree = "<group>"; };
+		4AC095711877AAED00D18DC0 /* CBInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBInfoViewController.h; sourceTree = "<group>"; };
+		4AC095721877AAED00D18DC0 /* CBInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBInfoViewController.m; sourceTree = "<group>"; };
+		4AC095741877AAF700D18DC0 /* CBChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBChartViewController.h; sourceTree = "<group>"; };
+		4AC095751877AAF700D18DC0 /* CBChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBChartViewController.m; sourceTree = "<group>"; };
+		4AC095771877AAFF00D18DC0 /* CBListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBListViewController.h; sourceTree = "<group>"; };
+		4AC095781877AAFF00D18DC0 /* CBListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBListViewController.m; sourceTree = "<group>"; };
+		4AC095851878B18800D18DC0 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		4AC095861878B18800D18DC0 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		4AC095881878BA8E00D18DC0 /* CBRevealMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBRevealMenuViewController.h; sourceTree = "<group>"; };
+		4AC095891878BA8E00D18DC0 /* CBRevealMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBRevealMenuViewController.m; sourceTree = "<group>"; };
+		4AC0958B1878E02C00D18DC0 /* CBProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBProfileViewController.h; sourceTree = "<group>"; };
+		4AC0958C1878E02C00D18DC0 /* CBProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBProfileViewController.m; sourceTree = "<group>"; };
+		4AC0958F1878E3EC00D18DC0 /* CBSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBSettingViewController.h; sourceTree = "<group>"; };
+		4AC095901878E3EC00D18DC0 /* CBSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBSettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,13 +154,12 @@
 		4A9A5334186F433D0067F415 /* courseBustr */ = {
 			isa = PBXGroup;
 			children = (
+				4AC095841878B16500D18DC0 /* ExLibrary */,
 				4AA137601871FE4D0054E742 /* CustomViews */,
 				4A9A536A186F527D0067F415 /* ViewControllers */,
 				4A9A5363186F45A00067F415 /* Model */,
 				4A9A533D186F433D0067F415 /* CBAppDelegate.h */,
 				4A9A533E186F433D0067F415 /* CBAppDelegate.m */,
-				4AA1375D18709E180054E742 /* CBDataSingleton.h */,
-				4AA1375E18709E180054E742 /* CBDataSingleton.m */,
 				4A9A5340186F433D0067F415 /* Main.storyboard */,
 				4A9A5346186F433D0067F415 /* Images.xcassets */,
 				4A9A5335186F433D0067F415 /* Supporting Files */,
@@ -179,6 +199,8 @@
 		4A9A5363186F45A00067F415 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4AA1375D18709E180054E742 /* CBDataSingleton.h */,
+				4AA1375E18709E180054E742 /* CBDataSingleton.m */,
 				4A9A5364186F45A00067F415 /* CBCourseModel.h */,
 				4A9A5365186F45A00067F415 /* CBCourseModel.m */,
 			);
@@ -188,6 +210,9 @@
 		4A9A536A186F527D0067F415 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4AC0958E1878E3C600D18DC0 /* MiscViewController */,
+				4AC095881878BA8E00D18DC0 /* CBRevealMenuViewController.h */,
+				4AC095891878BA8E00D18DC0 /* CBRevealMenuViewController.m */,
 				4A9A5343186F433D0067F415 /* CBViewController.h */,
 				4A9A5344186F433D0067F415 /* CBViewController.m */,
 				4A9A5367186F48440067F415 /* CBDetailViewController.h */,
@@ -207,8 +232,34 @@
 				4AA137621871FE750054E742 /* CBCircleButton.m */,
 				4AC0956E1877A14C00D18DC0 /* CBPageContentViewController.h */,
 				4AC0956F1877A14C00D18DC0 /* CBPageContentViewController.m */,
+				4AC095711877AAED00D18DC0 /* CBInfoViewController.h */,
+				4AC095721877AAED00D18DC0 /* CBInfoViewController.m */,
+				4AC095741877AAF700D18DC0 /* CBChartViewController.h */,
+				4AC095751877AAF700D18DC0 /* CBChartViewController.m */,
+				4AC095771877AAFF00D18DC0 /* CBListViewController.h */,
+				4AC095781877AAFF00D18DC0 /* CBListViewController.m */,
 			);
 			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		4AC095841878B16500D18DC0 /* ExLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				4AC095851878B18800D18DC0 /* SWRevealViewController.h */,
+				4AC095861878B18800D18DC0 /* SWRevealViewController.m */,
+			);
+			path = ExLibrary;
+			sourceTree = "<group>";
+		};
+		4AC0958E1878E3C600D18DC0 /* MiscViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4AC0958B1878E02C00D18DC0 /* CBProfileViewController.h */,
+				4AC0958C1878E02C00D18DC0 /* CBProfileViewController.m */,
+				4AC0958F1878E3EC00D18DC0 /* CBSettingViewController.h */,
+				4AC095901878E3EC00D18DC0 /* CBSettingViewController.m */,
+			);
+			name = MiscViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,15 +360,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AC095791877AAFF00D18DC0 /* CBListViewController.m in Sources */,
 				4AA1375C187016670054E742 /* CBEditViewController.m in Sources */,
+				4AC095731877AAED00D18DC0 /* CBInfoViewController.m in Sources */,
 				4AA13759186FEC520054E742 /* CBAddItemViewController.m in Sources */,
 				4A9A533B186F433D0067F415 /* main.m in Sources */,
+				4AC095761877AAF700D18DC0 /* CBChartViewController.m in Sources */,
 				4AA137631871FE750054E742 /* CBCircleButton.m in Sources */,
+				4AC095871878B18800D18DC0 /* SWRevealViewController.m in Sources */,
 				4AC095701877A14C00D18DC0 /* CBPageContentViewController.m in Sources */,
+				4AC0958D1878E02C00D18DC0 /* CBProfileViewController.m in Sources */,
 				4A9A5366186F45A00067F415 /* CBCourseModel.m in Sources */,
 				4A9A5369186F48440067F415 /* CBDetailViewController.m in Sources */,
+				4AC095911878E3EC00D18DC0 /* CBSettingViewController.m in Sources */,
 				4A9A533F186F433D0067F415 /* CBAppDelegate.m in Sources */,
 				4AA1375F18709E180054E742 /* CBDataSingleton.m in Sources */,
+				4AC0958A1878BA8E00D18DC0 /* CBRevealMenuViewController.m in Sources */,
 				4A9A5345186F433D0067F415 /* CBViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

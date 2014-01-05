@@ -26,6 +26,4 @@
 
 @property (strong, nonatomic) NSArray* pageContentID;
 
-- (IBAction)onButtonEdit:(id)sender;
-
 @end

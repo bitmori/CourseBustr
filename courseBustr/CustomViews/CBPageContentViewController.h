@@ -12,4 +12,6 @@
 
 @property (assign, nonatomic) NSUInteger pageIndex;
 
+@property (assign, nonatomic) NSInteger row;
+
 @end

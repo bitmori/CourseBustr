@@ -10,8 +10,11 @@
 #import "CBCourseModel.h"
 #import "CBDataSingleton.h"
 #import "CBDetailViewController.h"
+#import "SWRevealViewController.h"
 
 @interface CBViewController ()
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *revealMenuButton;
 
 @end
 
@@ -20,6 +23,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.revealMenuButton setTarget: self.revealViewController];
+    [self.revealMenuButton setAction: @selector(revealToggle:)];
+    //[self.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    [self.view addGestureRecognizer:self.revealViewController.tapGestureRecognizer];
+    
     NSArray* _dataArray = @[@[@31152, @"CS 125", @"Intro to Computer Science"],
                    //@[@39311, @"CS 173", @"Discrete Structures"],
                    //@[@31208, @"CS 225", @"Data Structures"],
@@ -27,7 +37,9 @@
                    //@[@53753, @"CS 241", @"System Programming"],
                    @[@50142, @"CS 373", @"Theory of Computation"]
                    ];
+    //not add!! should refresh!
     CBDataSingleton* sharedData = [CBDataSingleton sharedData];
+    [sharedData.courseList removeAllObjects];
     for (NSArray* item in _dataArray) {
         CBCourseModel* course = [[CBCourseModel alloc] initWithCRN:[item[0] integerValue] CID:item[1] Name:item[2]];
         [sharedData.courseList addObject:course];
@@ -74,6 +86,18 @@
     
     return cell;
 }
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *) indexPath {
+    return YES;
+}
+
+//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    if (editingStyle==UITableViewCellEditingStyleDelete) {
+//        [programmes removeObjectAtIndex:indexPath.row];
+//        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+//    }
+//}
 
 #pragma mark - CBAddItemViewControllerDelegate
 
