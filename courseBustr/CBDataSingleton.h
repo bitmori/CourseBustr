@@ -14,7 +14,7 @@
 }
 
 @property (nonatomic, strong) NSMutableArray* courseList;
-
+@property (nonatomic, strong) NSArray* colorList;
 + (id)sharedData;
 
 @end

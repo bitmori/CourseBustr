@@ -13,8 +13,13 @@
 #import "SWRevealViewController.h"
 
 @interface CBViewController ()
+{
+    UIActionSheet* m_sheet;
+}
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *revealMenuButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *actionButton;
+- (IBAction)actionSheetButton:(id)sender;
 
 @end
 
@@ -23,6 +28,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    m_sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Add Course", @"Edit Courses", @"Sorting", nil];
     
     [self.revealMenuButton setTarget: self.revealViewController];
     [self.revealMenuButton setAction: @selector(revealToggle:)];
@@ -41,10 +48,9 @@
     CBDataSingleton* sharedData = [CBDataSingleton sharedData];
     [sharedData.courseList removeAllObjects];
     for (NSArray* item in _dataArray) {
-        CBCourseModel* course = [[CBCourseModel alloc] initWithCRN:[item[0] integerValue] CID:item[1] Name:item[2]];
+        CBCourseModel* course = [[CBCourseModel alloc] initWithCRN:[item[0] integerValue] CID:item[1] Name:item[2] ColorID:0];
         [sharedData.courseList addObject:course];
     }
-    //self.navigationItem.rightBarButtonItems
 }
 
 - (void)didReceiveMemoryWarning
@@ -82,8 +88,8 @@
     UILabel* labelName = (UILabel *)[cell viewWithTag:103];
     [labelName setText:course.name];
     UILabel* labelColor = (UILabel *)[cell viewWithTag:104];
-    [labelColor setBackgroundColor:[UIColor redColor]];
-    
+    [labelColor setBackgroundColor:sharedData.colorList[course.color]];
+
     return cell;
 }
 
@@ -91,13 +97,32 @@
     return YES;
 }
 
-//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    if (editingStyle==UITableViewCellEditingStyleDelete) {
-//        [programmes removeObjectAtIndex:indexPath.row];
-//        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-//    }
-//}
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)
+sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+    NSUInteger fromRow = [sourceIndexPath row];
+    NSUInteger toRow = [destinationIndexPath row];
+    
+    CBDataSingleton* sharedData = [CBDataSingleton sharedData];
+    id object = [sharedData.courseList objectAtIndex:fromRow];
+    [sharedData.courseList removeObjectAtIndex:fromRow];
+    [sharedData.courseList insertObject:object atIndex:toRow];
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:
+(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSUInteger row = [indexPath row];
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        CBDataSingleton* sharedData = [CBDataSingleton sharedData];
+        [sharedData.courseList removeObjectAtIndex:row];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath]
+                         withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+}
 
 #pragma mark - CBAddItemViewControllerDelegate
 
@@ -121,12 +146,10 @@
         UINavigationController* navController = segue.destinationViewController;
         CBAddItemViewController* addController = [[navController viewControllers] objectAtIndex:0];
         addController.delegate = self;
-    } else if ([segue.identifier isEqualToString:@"segueToDetailView"]) {
+    }
+    if ([segue.identifier isEqualToString:@"segueToDetailView"]) {
         NSIndexPath *indexPath = [self.tableCourse indexPathForSelectedRow];
-        UINavigationController* navController = segue.destinationViewController;
-        CBDetailViewController *detail = [[navController viewControllers] objectAtIndex:0];
-        //CBDataSingleton* sharedData = [CBDataSingleton sharedData];
-        //CBCourseModel* course = sharedData.courseList[indexPath.row];
+        CBDetailViewController *detail = segue.destinationViewController;
         detail.row = indexPath.row;
         detail.delegate = self;
     }
@@ -137,4 +160,32 @@
     [self.tableCourse reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:row inSection:0]] withRowAnimation:UITableViewRowAnimationRight];
 }
 
+- (IBAction)actionSheetButton:(id)sender
+{
+    if (self.tableCourse.editing) {
+        [self.tableCourse setEditing:NO animated:YES];
+        [self.actionButton setTitle:@"Action"];
+    } else {
+        [m_sheet showInView:self.view];
+    }
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex) {
+        case 0:
+            [self performSegueWithIdentifier:@"addCourse" sender:self];
+            break;
+        case 1:
+            if (!self.tableCourse.editing) {
+                [self.tableCourse setEditing:YES animated:YES];
+                [self.actionButton setTitle:@"Done"];
+            }
+            break;
+        case 2:
+            break;
+        default:
+            break;
+    }
+}
 @end

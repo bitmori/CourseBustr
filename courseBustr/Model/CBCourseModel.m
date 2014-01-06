@@ -16,7 +16,18 @@
         self.CRN = CRN;
         self.CID = CID;
         self.name = name;
-        self.color = @"";
+        self.color = 0;
+    }
+    return self;
+}
+
+- (id) initWithCRN:(NSInteger)CRN CID:(NSString*)CID Name:(NSString*)name ColorID:(NSInteger)color
+{
+    if ((self=[super init])) {
+        self.CRN = CRN;
+        self.CID = CID;
+        self.name = name;
+        self.color = color;
     }
     return self;
 }

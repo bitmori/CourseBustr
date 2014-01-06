@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A400F72187A7CD0005C3303 /* CBCircleButtonWithLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A400F71187A7CD0005C3303 /* CBCircleButtonWithLabel.m */; };
 		4A9A532F186F433D0067F415 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9A532E186F433D0067F415 /* Foundation.framework */; };
 		4A9A5331186F433D0067F415 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9A5330186F433D0067F415 /* CoreGraphics.framework */; };
 		4A9A5333186F433D0067F415 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9A5332186F433D0067F415 /* UIKit.framework */; };
@@ -15,7 +16,6 @@
 		4A9A533F186F433D0067F415 /* CBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9A533E186F433D0067F415 /* CBAppDelegate.m */; };
 		4A9A5342186F433D0067F415 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A9A5340186F433D0067F415 /* Main.storyboard */; };
 		4A9A5345186F433D0067F415 /* CBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9A5344186F433D0067F415 /* CBViewController.m */; };
-		4A9A5347186F433D0067F415 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A9A5346186F433D0067F415 /* Images.xcassets */; };
 		4A9A534E186F433D0067F415 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9A534D186F433D0067F415 /* XCTest.framework */; };
 		4A9A534F186F433D0067F415 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9A532E186F433D0067F415 /* Foundation.framework */; };
 		4A9A5350186F433D0067F415 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9A5332186F433D0067F415 /* UIKit.framework */; };
@@ -35,6 +35,7 @@
 		4AC0958A1878BA8E00D18DC0 /* CBRevealMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC095891878BA8E00D18DC0 /* CBRevealMenuViewController.m */; };
 		4AC0958D1878E02C00D18DC0 /* CBProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC0958C1878E02C00D18DC0 /* CBProfileViewController.m */; };
 		4AC095911878E3EC00D18DC0 /* CBSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC095901878E3EC00D18DC0 /* CBSettingViewController.m */; };
+		4AC095931879D4E100D18DC0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AC095921879D4E100D18DC0 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A400F70187A7CD0005C3303 /* CBCircleButtonWithLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBCircleButtonWithLabel.h; sourceTree = "<group>"; };
+		4A400F71187A7CD0005C3303 /* CBCircleButtonWithLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBCircleButtonWithLabel.m; sourceTree = "<group>"; };
 		4A9A532B186F433D0067F415 /* courseBustr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = courseBustr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A9A532E186F433D0067F415 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4A9A5330186F433D0067F415 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,7 +64,6 @@
 		4A9A5341186F433D0067F415 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A9A5343186F433D0067F415 /* CBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBViewController.h; sourceTree = "<group>"; };
 		4A9A5344186F433D0067F415 /* CBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBViewController.m; sourceTree = "<group>"; };
-		4A9A5346186F433D0067F415 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4A9A534C186F433D0067F415 /* courseBustrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = courseBustrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A9A534D186F433D0067F415 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4A9A5355186F433D0067F415 /* courseBustrTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "courseBustrTests-Info.plist"; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		4AC0958C1878E02C00D18DC0 /* CBProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBProfileViewController.m; sourceTree = "<group>"; };
 		4AC0958F1878E3EC00D18DC0 /* CBSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBSettingViewController.h; sourceTree = "<group>"; };
 		4AC095901878E3EC00D18DC0 /* CBSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBSettingViewController.m; sourceTree = "<group>"; };
+		4AC095921879D4E100D18DC0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,7 +164,7 @@
 				4A9A533D186F433D0067F415 /* CBAppDelegate.h */,
 				4A9A533E186F433D0067F415 /* CBAppDelegate.m */,
 				4A9A5340186F433D0067F415 /* Main.storyboard */,
-				4A9A5346186F433D0067F415 /* Images.xcassets */,
+				4AC095921879D4E100D18DC0 /* Images.xcassets */,
 				4A9A5335186F433D0067F415 /* Supporting Files */,
 			);
 			path = courseBustr;
@@ -230,6 +233,8 @@
 			children = (
 				4AA137611871FE750054E742 /* CBCircleButton.h */,
 				4AA137621871FE750054E742 /* CBCircleButton.m */,
+				4A400F70187A7CD0005C3303 /* CBCircleButtonWithLabel.h */,
+				4A400F71187A7CD0005C3303 /* CBCircleButtonWithLabel.m */,
 				4AC0956E1877A14C00D18DC0 /* CBPageContentViewController.h */,
 				4AC0956F1877A14C00D18DC0 /* CBPageContentViewController.m */,
 				4AC095711877AAED00D18DC0 /* CBInfoViewController.h */,
@@ -339,7 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A9A5347186F433D0067F415 /* Images.xcassets in Resources */,
+				4AC095931879D4E100D18DC0 /* Images.xcassets in Resources */,
 				4A9A5339186F433D0067F415 /* InfoPlist.strings in Resources */,
 				4A9A5342186F433D0067F415 /* Main.storyboard in Resources */,
 			);
@@ -377,6 +382,7 @@
 				4AA1375F18709E180054E742 /* CBDataSingleton.m in Sources */,
 				4AC0958A1878BA8E00D18DC0 /* CBRevealMenuViewController.m in Sources */,
 				4A9A5345186F433D0067F415 /* CBViewController.m in Sources */,
+				4A400F72187A7CD0005C3303 /* CBCircleButtonWithLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

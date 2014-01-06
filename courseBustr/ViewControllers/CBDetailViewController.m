@@ -71,6 +71,7 @@
     c.name = course.name;
     c.CID = course.CID;
     c.CRN = course.CRN;
+    c.color = course.color;
     self.title = course.CID;
 //    [self.labelName setText:course.name];
 //    [self.labelCID setText:course.CID];

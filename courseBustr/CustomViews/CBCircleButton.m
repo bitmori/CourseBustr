@@ -14,7 +14,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
     }
     return self;
 }
@@ -23,15 +22,23 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
-    //self.backgroundColor
     CGContextRef ctx = UIGraphicsGetCurrentContext();
-    CGRect newrect = CGRectMake(1,1,rect.size.width-2,rect.size.height-2);
+    CGRect newrect = CGRectMake(3,3,rect.size.width-6,rect.size.height-6);
     UIColor * color = [self titleColorForState:UIControlStateNormal];
     CGContextSetFillColorWithColor(ctx, color.CGColor);
     CGContextBeginPath(ctx);
     CGContextAddEllipseInRect(ctx, newrect);
     
     CGContextDrawPath(ctx, kCGPathFill);
+    if (!self.isEnabled) {
+        //[UIColor colorWithWhite:0.1f alpha:1.0f].CGColor
+        //CGContextSetFillColorWithColor(ctx, color.CGColor);
+        CGContextSetStrokeColorWithColor(ctx, color.CGColor);
+        CGContextBeginPath(ctx);
+        //CGContextAddEllipseInRect(ctx, CGRectMake(5, 5, 5, 5));
+        CGContextAddEllipseInRect(ctx, CGRectMake(1, 1, rect.size.width-2, rect.size.height-2));
+        CGContextDrawPath(ctx, kCGPathStroke);
+    }
 }
 
 @end

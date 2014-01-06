@@ -11,6 +11,8 @@
 
 @interface CBAddItemViewController ()
 
+@property (assign, nonatomic) NSInteger colorID;
+
 @end
 
 @implementation CBAddItemViewController
@@ -29,6 +31,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.colorID = 0;
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    for (int i=200; i<208; i++) {
+        [(UIButton*)[self.view viewWithTag:i] setEnabled:(i!=(self.colorID+200))];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,7 +50,7 @@
 
 - (IBAction)onButtonDone:(id)sender
 {
-    CBCourseModel* course = [[CBCourseModel alloc] initWithCRN:[self.fieldCRN.text integerValue] CID:self.fieldCID.text Name:self.fieldName.text];
+    CBCourseModel* course = [[CBCourseModel alloc] initWithCRN:[self.fieldCRN.text integerValue] CID:self.fieldCID.text Name:self.fieldName.text ColorID:self.colorID];
     [self.delegate addItemViewControllerDidDone:self withCourseModel:course];
 }
 
@@ -48,16 +60,17 @@
 
 - (IBAction)onColorSelButton:(id)sender {
     NSInteger t = [(UIButton*)sender tag];
-    UIColor *color = [(UIButton*)sender titleColorForState:UIControlStateNormal];
-    const CGFloat *components = CGColorGetComponents(color.CGColor);
-    NSString *colorAsString = [NSString stringWithFormat:@"%f,%f,%f,%f", components[0], components[1], components[2], components[3]];
-    switch (t) {
-        case 201:
-            NSLog(@"%@", @"orange");
-            break;
-        default:
-            NSLog(@"%@", colorAsString);
-            break;
+    for (int i=200; i<208; i++) {
+        [(UIButton*)[self.view viewWithTag:i] setEnabled:(i!=t)];
     }
+    self.colorID = t-200;
+//    switch (t) {
+//        case 201:
+//            NSLog(@"%@", @"orange");
+//            break;
+//        default:
+//            NSLog(@"%@", colorAsString);
+//            break;
+//    }
 }
 @end

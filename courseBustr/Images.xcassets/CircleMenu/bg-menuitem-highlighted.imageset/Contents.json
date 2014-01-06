@@ -3,11 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "wishlist.png"
+      "filename" : "bg-menuitem-highlighted.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "bg-menuitem-highlighted@2x.png"
     }
   ],
   "info" : {
