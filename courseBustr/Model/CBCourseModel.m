@@ -17,6 +17,7 @@
         self.CID = CID;
         self.name = name;
         self.color = 0;
+        self.grade = [[NSMutableDictionary alloc] init];
     }
     return self;
 }
@@ -28,8 +29,14 @@
         self.CID = CID;
         self.name = name;
         self.color = color;
+        self.grade = [[NSMutableDictionary alloc] init];
     }
     return self;
+}
+
+- (void) addGradeForAssign:(NSString*)assign Score:(NSNumber*)score
+{
+    [self.grade setObject:score forKey:assign];
 }
 
 @end

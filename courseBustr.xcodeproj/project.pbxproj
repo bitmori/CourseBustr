@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		4A400F72187A7CD0005C3303 /* CBCircleButtonWithLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A400F71187A7CD0005C3303 /* CBCircleButtonWithLabel.m */; };
+		4A400F76187A90FC005C3303 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A400F75187A90FC005C3303 /* Parse.framework */; };
+		4A400F78187A9128005C3303 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A400F77187A9128005C3303 /* AudioToolbox.framework */; };
+		4A400F7A187A9131005C3303 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A400F79187A9131005C3303 /* CFNetwork.framework */; };
+		4A400F7C187A9143005C3303 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A400F7B187A9143005C3303 /* CoreLocation.framework */; };
+		4A400F7E187A914F005C3303 /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A400F7D187A914F005C3303 /* libz.1.1.3.dylib */; };
+		4A400F80187A9158005C3303 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A400F7F187A9158005C3303 /* MobileCoreServices.framework */; };
+		4A400F82187A9160005C3303 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A400F81187A9160005C3303 /* QuartzCore.framework */; };
+		4A400F84187A9167005C3303 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A400F83187A9167005C3303 /* Security.framework */; };
+		4A400F86187A916E005C3303 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A400F85187A916E005C3303 /* StoreKit.framework */; };
+		4A400F88187A9177005C3303 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A400F87187A9177005C3303 /* SystemConfiguration.framework */; };
+		4A400F8B187B5B27005C3303 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A400F8A187B5B27005C3303 /* FacebookSDK.framework */; };
+		4A400F8E187DCC4C005C3303 /* CBUserRoundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A400F8D187DCC4C005C3303 /* CBUserRoundImage.m */; };
+		4A400F91187E23CA005C3303 /* CBCommonUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A400F90187E23CA005C3303 /* CBCommonUtils.m */; };
+		4A400F95187E270A005C3303 /* CBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A400F94187E270A005C3303 /* CBLoginViewController.m */; };
 		4A9A532F186F433D0067F415 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9A532E186F433D0067F415 /* Foundation.framework */; };
 		4A9A5331186F433D0067F415 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9A5330186F433D0067F415 /* CoreGraphics.framework */; };
 		4A9A5333186F433D0067F415 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9A5332186F433D0067F415 /* UIKit.framework */; };
@@ -36,6 +50,7 @@
 		4AC0958D1878E02C00D18DC0 /* CBProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC0958C1878E02C00D18DC0 /* CBProfileViewController.m */; };
 		4AC095911878E3EC00D18DC0 /* CBSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC095901878E3EC00D18DC0 /* CBSettingViewController.m */; };
 		4AC095931879D4E100D18DC0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AC095921879D4E100D18DC0 /* Images.xcassets */; };
+		C574C8B9320940CE88E58665 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C066A11E1D9745B8BFB34ACC /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +64,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0649948244C347D685F8A364 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		4A400F70187A7CD0005C3303 /* CBCircleButtonWithLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBCircleButtonWithLabel.h; sourceTree = "<group>"; };
 		4A400F71187A7CD0005C3303 /* CBCircleButtonWithLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBCircleButtonWithLabel.m; sourceTree = "<group>"; };
+		4A400F75187A90FC005C3303 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		4A400F77187A9128005C3303 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4A400F79187A9131005C3303 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		4A400F7B187A9143005C3303 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4A400F7D187A914F005C3303 /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		4A400F7F187A9158005C3303 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		4A400F81187A9160005C3303 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4A400F83187A9167005C3303 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4A400F85187A916E005C3303 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		4A400F87187A9177005C3303 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4A400F8A187B5B27005C3303 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		4A400F8C187DCC4C005C3303 /* CBUserRoundImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBUserRoundImage.h; path = ../ViewControllers/CBUserRoundImage.h; sourceTree = "<group>"; };
+		4A400F8D187DCC4C005C3303 /* CBUserRoundImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBUserRoundImage.m; path = ../ViewControllers/CBUserRoundImage.m; sourceTree = "<group>"; };
+		4A400F8F187E23CA005C3303 /* CBCommonUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBCommonUtils.h; sourceTree = "<group>"; };
+		4A400F90187E23CA005C3303 /* CBCommonUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBCommonUtils.m; sourceTree = "<group>"; };
+		4A400F93187E270A005C3303 /* CBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBLoginViewController.h; sourceTree = "<group>"; };
+		4A400F94187E270A005C3303 /* CBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBLoginViewController.m; sourceTree = "<group>"; };
 		4A9A532B186F433D0067F415 /* courseBustr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = courseBustr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A9A532E186F433D0067F415 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4A9A5330186F433D0067F415 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -81,14 +114,14 @@
 		4AA1375E18709E180054E742 /* CBDataSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBDataSingleton.m; path = ../CBDataSingleton.m; sourceTree = "<group>"; };
 		4AA137611871FE750054E742 /* CBCircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBCircleButton.h; sourceTree = "<group>"; };
 		4AA137621871FE750054E742 /* CBCircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBCircleButton.m; sourceTree = "<group>"; };
-		4AC0956E1877A14C00D18DC0 /* CBPageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBPageContentViewController.h; sourceTree = "<group>"; };
-		4AC0956F1877A14C00D18DC0 /* CBPageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBPageContentViewController.m; sourceTree = "<group>"; };
-		4AC095711877AAED00D18DC0 /* CBInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBInfoViewController.h; sourceTree = "<group>"; };
-		4AC095721877AAED00D18DC0 /* CBInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBInfoViewController.m; sourceTree = "<group>"; };
-		4AC095741877AAF700D18DC0 /* CBChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBChartViewController.h; sourceTree = "<group>"; };
-		4AC095751877AAF700D18DC0 /* CBChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBChartViewController.m; sourceTree = "<group>"; };
-		4AC095771877AAFF00D18DC0 /* CBListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBListViewController.h; sourceTree = "<group>"; };
-		4AC095781877AAFF00D18DC0 /* CBListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBListViewController.m; sourceTree = "<group>"; };
+		4AC0956E1877A14C00D18DC0 /* CBPageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBPageContentViewController.h; path = ../CustomViews/CBPageContentViewController.h; sourceTree = "<group>"; };
+		4AC0956F1877A14C00D18DC0 /* CBPageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBPageContentViewController.m; path = ../CustomViews/CBPageContentViewController.m; sourceTree = "<group>"; };
+		4AC095711877AAED00D18DC0 /* CBInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBInfoViewController.h; path = ../CustomViews/CBInfoViewController.h; sourceTree = "<group>"; };
+		4AC095721877AAED00D18DC0 /* CBInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBInfoViewController.m; path = ../CustomViews/CBInfoViewController.m; sourceTree = "<group>"; };
+		4AC095741877AAF700D18DC0 /* CBChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBChartViewController.h; path = ../CustomViews/CBChartViewController.h; sourceTree = "<group>"; };
+		4AC095751877AAF700D18DC0 /* CBChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBChartViewController.m; path = ../CustomViews/CBChartViewController.m; sourceTree = "<group>"; };
+		4AC095771877AAFF00D18DC0 /* CBListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBListViewController.h; path = ../CustomViews/CBListViewController.h; sourceTree = "<group>"; };
+		4AC095781877AAFF00D18DC0 /* CBListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBListViewController.m; path = ../CustomViews/CBListViewController.m; sourceTree = "<group>"; };
 		4AC095851878B18800D18DC0 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		4AC095861878B18800D18DC0 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		4AC095881878BA8E00D18DC0 /* CBRevealMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBRevealMenuViewController.h; sourceTree = "<group>"; };
@@ -98,6 +131,7 @@
 		4AC0958F1878E3EC00D18DC0 /* CBSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBSettingViewController.h; sourceTree = "<group>"; };
 		4AC095901878E3EC00D18DC0 /* CBSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBSettingViewController.m; sourceTree = "<group>"; };
 		4AC095921879D4E100D18DC0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C066A11E1D9745B8BFB34ACC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +139,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A400F88187A9177005C3303 /* SystemConfiguration.framework in Frameworks */,
+				4A400F86187A916E005C3303 /* StoreKit.framework in Frameworks */,
+				4A400F84187A9167005C3303 /* Security.framework in Frameworks */,
+				4A400F82187A9160005C3303 /* QuartzCore.framework in Frameworks */,
+				4A400F80187A9158005C3303 /* MobileCoreServices.framework in Frameworks */,
+				4A400F7E187A914F005C3303 /* libz.1.1.3.dylib in Frameworks */,
+				4A400F7C187A9143005C3303 /* CoreLocation.framework in Frameworks */,
 				4A9A5331186F433D0067F415 /* CoreGraphics.framework in Frameworks */,
+				4A400F7A187A9131005C3303 /* CFNetwork.framework in Frameworks */,
+				4A400F78187A9128005C3303 /* AudioToolbox.framework in Frameworks */,
 				4A9A5333186F433D0067F415 /* UIKit.framework in Frameworks */,
+				4A400F8B187B5B27005C3303 /* FacebookSDK.framework in Frameworks */,
+				4A400F76187A90FC005C3303 /* Parse.framework in Frameworks */,
 				4A9A532F186F433D0067F415 /* Foundation.framework in Frameworks */,
+				C574C8B9320940CE88E58665 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +170,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A400F89187B56FA005C3303 /* PageContentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4AC0956E1877A14C00D18DC0 /* CBPageContentViewController.h */,
+				4AC0956F1877A14C00D18DC0 /* CBPageContentViewController.m */,
+				4AC095711877AAED00D18DC0 /* CBInfoViewController.h */,
+				4AC095721877AAED00D18DC0 /* CBInfoViewController.m */,
+				4AC095741877AAF700D18DC0 /* CBChartViewController.h */,
+				4AC095751877AAF700D18DC0 /* CBChartViewController.m */,
+				4AC095771877AAFF00D18DC0 /* CBListViewController.h */,
+				4AC095781877AAFF00D18DC0 /* CBListViewController.m */,
+			);
+			name = PageContentViewController;
+			sourceTree = "<group>";
+		};
+		4A400F92187E26F2005C3303 /* UserViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A400F93187E270A005C3303 /* CBLoginViewController.h */,
+				4A400F94187E270A005C3303 /* CBLoginViewController.m */,
+			);
+			name = UserViewController;
+			sourceTree = "<group>";
+		};
 		4A9A5322186F433D0067F415 = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +201,7 @@
 				4A9A5353186F433D0067F415 /* courseBustrTests */,
 				4A9A532D186F433D0067F415 /* Frameworks */,
 				4A9A532C186F433D0067F415 /* Products */,
+				0649948244C347D685F8A364 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,10 +217,22 @@
 		4A9A532D186F433D0067F415 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4A400F8A187B5B27005C3303 /* FacebookSDK.framework */,
+				4A400F87187A9177005C3303 /* SystemConfiguration.framework */,
+				4A400F85187A916E005C3303 /* StoreKit.framework */,
+				4A400F83187A9167005C3303 /* Security.framework */,
+				4A400F81187A9160005C3303 /* QuartzCore.framework */,
+				4A400F7F187A9158005C3303 /* MobileCoreServices.framework */,
+				4A400F7D187A914F005C3303 /* libz.1.1.3.dylib */,
+				4A400F7B187A9143005C3303 /* CoreLocation.framework */,
+				4A400F79187A9131005C3303 /* CFNetwork.framework */,
+				4A400F77187A9128005C3303 /* AudioToolbox.framework */,
+				4A400F75187A90FC005C3303 /* Parse.framework */,
 				4A9A532E186F433D0067F415 /* Foundation.framework */,
 				4A9A5330186F433D0067F415 /* CoreGraphics.framework */,
 				4A9A5332186F433D0067F415 /* UIKit.framework */,
 				4A9A534D186F433D0067F415 /* XCTest.framework */,
+				C066A11E1D9745B8BFB34ACC /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -213,6 +296,8 @@
 		4A9A536A186F527D0067F415 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4A400F92187E26F2005C3303 /* UserViewController */,
+				4A400F89187B56FA005C3303 /* PageContentViewController */,
 				4AC0958E1878E3C600D18DC0 /* MiscViewController */,
 				4AC095881878BA8E00D18DC0 /* CBRevealMenuViewController.h */,
 				4AC095891878BA8E00D18DC0 /* CBRevealMenuViewController.m */,
@@ -235,14 +320,8 @@
 				4AA137621871FE750054E742 /* CBCircleButton.m */,
 				4A400F70187A7CD0005C3303 /* CBCircleButtonWithLabel.h */,
 				4A400F71187A7CD0005C3303 /* CBCircleButtonWithLabel.m */,
-				4AC0956E1877A14C00D18DC0 /* CBPageContentViewController.h */,
-				4AC0956F1877A14C00D18DC0 /* CBPageContentViewController.m */,
-				4AC095711877AAED00D18DC0 /* CBInfoViewController.h */,
-				4AC095721877AAED00D18DC0 /* CBInfoViewController.m */,
-				4AC095741877AAF700D18DC0 /* CBChartViewController.h */,
-				4AC095751877AAF700D18DC0 /* CBChartViewController.m */,
-				4AC095771877AAFF00D18DC0 /* CBListViewController.h */,
-				4AC095781877AAFF00D18DC0 /* CBListViewController.m */,
+				4A400F8C187DCC4C005C3303 /* CBUserRoundImage.h */,
+				4A400F8D187DCC4C005C3303 /* CBUserRoundImage.m */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -252,6 +331,8 @@
 			children = (
 				4AC095851878B18800D18DC0 /* SWRevealViewController.h */,
 				4AC095861878B18800D18DC0 /* SWRevealViewController.m */,
+				4A400F8F187E23CA005C3303 /* CBCommonUtils.h */,
+				4A400F90187E23CA005C3303 /* CBCommonUtils.m */,
 			);
 			path = ExLibrary;
 			sourceTree = "<group>";
@@ -274,9 +355,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A9A535D186F433D0067F415 /* Build configuration list for PBXNativeTarget "courseBustr" */;
 			buildPhases = (
+				CF0E07A1E849498391047F21 /* Check Pods Manifest.lock */,
 				4A9A5327186F433D0067F415 /* Sources */,
 				4A9A5328186F433D0067F415 /* Frameworks */,
 				4A9A5329186F433D0067F415 /* Resources */,
+				B018F2B6B08E462A89C08F6C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -360,6 +443,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B018F2B6B08E462A89C08F6C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF0E07A1E849498391047F21 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4A9A5327186F433D0067F415 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -368,12 +484,15 @@
 				4AC095791877AAFF00D18DC0 /* CBListViewController.m in Sources */,
 				4AA1375C187016670054E742 /* CBEditViewController.m in Sources */,
 				4AC095731877AAED00D18DC0 /* CBInfoViewController.m in Sources */,
+				4A400F95187E270A005C3303 /* CBLoginViewController.m in Sources */,
 				4AA13759186FEC520054E742 /* CBAddItemViewController.m in Sources */,
 				4A9A533B186F433D0067F415 /* main.m in Sources */,
+				4A400F91187E23CA005C3303 /* CBCommonUtils.m in Sources */,
 				4AC095761877AAF700D18DC0 /* CBChartViewController.m in Sources */,
 				4AA137631871FE750054E742 /* CBCircleButton.m in Sources */,
 				4AC095871878B18800D18DC0 /* SWRevealViewController.m in Sources */,
 				4AC095701877A14C00D18DC0 /* CBPageContentViewController.m in Sources */,
+				4A400F8E187DCC4C005C3303 /* CBUserRoundImage.m in Sources */,
 				4AC0958D1878E02C00D18DC0 /* CBProfileViewController.m in Sources */,
 				4A9A5366186F45A00067F415 /* CBCourseModel.m in Sources */,
 				4A9A5369186F48440067F415 /* CBDetailViewController.m in Sources */,
@@ -506,9 +625,15 @@
 		};
 		4A9A535E186F433D0067F415 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0649948244C347D685F8A364 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					/Volumes/Mac/Kirk/Code/courseBustr,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "courseBustr/courseBustr-Prefix.pch";
 				INFOPLIST_FILE = "courseBustr/courseBustr-Info.plist";
@@ -519,9 +644,15 @@
 		};
 		4A9A535F186F433D0067F415 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0649948244C347D685F8A364 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					/Volumes/Mac/Kirk/Code/courseBustr,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "courseBustr/courseBustr-Prefix.pch";
 				INFOPLIST_FILE = "courseBustr/courseBustr-Info.plist";

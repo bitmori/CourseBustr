@@ -9,12 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface CBDataSingleton : NSObject
-{
-    NSMutableArray* courseList;
-}
 
 @property (nonatomic, strong) NSMutableArray* courseList;
 @property (nonatomic, strong) NSArray* colorList;
+@property (nonatomic, strong) NSDictionary* userData;
+
 + (id)sharedData;
 
 @end

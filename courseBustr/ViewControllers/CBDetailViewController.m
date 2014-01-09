@@ -48,9 +48,6 @@
     CBDataSingleton* sharedData = [CBDataSingleton sharedData];
     CBCourseModel* course = sharedData.courseList[self.row];
     self.title = course.CID;
-//    [self.labelName setText:course.name];
-//    [self.labelCID setText:course.CID];
-//    [self.labelCRN setText:[NSString stringWithFormat:@"%d", course.CRN]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,9 +70,6 @@
     c.CRN = course.CRN;
     c.color = course.color;
     self.title = course.CID;
-//    [self.labelName setText:course.name];
-//    [self.labelCID setText:course.CID];
-//    [self.labelCRN setText:[NSString stringWithFormat:@"%d", course.CRN]];
     [self.delegate updateCellAtRow:self.row];
     [self dismissViewControllerAnimated:YES completion:nil];
 }

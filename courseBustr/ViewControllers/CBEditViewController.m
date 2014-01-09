@@ -34,6 +34,9 @@
     [super viewDidLoad];
     CBDataSingleton* sharedData = [CBDataSingleton sharedData];
     CBCourseModel* course = sharedData.courseList[self.row];
+    [self.fieldCID setDelegate:self];
+    [self.fieldCRN setDelegate:self];
+    [self.fieldName setDelegate:self];
     [self.fieldName setText:course.name];
     [self.fieldCID setText:course.CID];
     [self.fieldCRN setText:[NSString stringWithFormat:@"%d", course.CRN]];
@@ -47,6 +50,12 @@
     for (int i=200; i<208; i++) {
         [(UIButton*)[self.view viewWithTag:i] setEnabled:(i!=(self.colorID+200))];
     }
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 

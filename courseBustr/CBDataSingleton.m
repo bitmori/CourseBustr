@@ -21,17 +21,6 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedAppData = [[self alloc] init];
-        sharedAppData.colorList =
-        @[
-        [UIColor blackColor],
-        [UIColor colorWithRed:1 green:102/255.0f blue:102/255.0f alpha:1],
-        [UIColor colorWithRed:1 green:128/255.0f blue:0 alpha:1],
-        [UIColor colorWithRed:1 green:204/255.0f blue:102/255.0f alpha:1],
-        [UIColor colorWithRed:128/255.0f green:102/255.0f blue:0 alpha:1],
-        [UIColor colorWithRed:102/255.0f green:204/255.0f blue:1 alpha:1],
-        [UIColor colorWithRed:1.0f green:111/255.0f blue:207/255.0f alpha:1],
-        [UIColor colorWithRed:179/255.0f green:179/255.0f blue:179/255.0f alpha:1]
-        ];
     });
     return sharedAppData;
 }
@@ -39,7 +28,19 @@
 - (id)init
 {
     if ((self=[super init])) {
-        courseList = [[NSMutableArray alloc] init];
+        self.courseList = [[NSMutableArray alloc] init];
+        self.colorList =
+        @[
+          [UIColor blackColor],
+          [UIColor colorWithRed:1 green:102/255.0f blue:102/255.0f alpha:1],
+          [UIColor colorWithRed:1 green:128/255.0f blue:0 alpha:1],
+          [UIColor colorWithRed:1 green:204/255.0f blue:102/255.0f alpha:1],
+          [UIColor colorWithRed:128/255.0f green:250/255.0f blue:0 alpha:1],
+          [UIColor colorWithRed:102/255.0f green:204/255.0f blue:1 alpha:1],
+          [UIColor colorWithRed:1.0f green:111/255.0f blue:207/255.0f alpha:1],
+          [UIColor colorWithRed:179/255.0f green:179/255.0f blue:179/255.0f alpha:1]
+          ];
+        self.userData = nil;
     }
     return self;
 }

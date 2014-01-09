@@ -18,7 +18,7 @@
 
 @end
 
-@interface CBEditViewController : UITableViewController
+@interface CBEditViewController : UITableViewController<UITextFieldDelegate>
 
 @property (nonatomic, weak) id<CBEditViewControllerDelegate> delegate;
 

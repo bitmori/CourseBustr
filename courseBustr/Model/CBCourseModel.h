@@ -14,6 +14,7 @@
 @property (nonatomic, copy) NSString* CID;
 @property (nonatomic, copy) NSString* name;
 @property (nonatomic, assign) NSInteger color;
+@property (nonatomic, strong) NSMutableDictionary* grade;
 
 - (id) initWithCRN:(NSInteger)CRN CID:(NSString*)CID Name:(NSString*)name;
 - (id) initWithCRN:(NSInteger)CRN CID:(NSString*)CID Name:(NSString*)name ColorID:(NSInteger)color;

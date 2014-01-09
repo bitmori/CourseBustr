@@ -7,16 +7,40 @@
 //
 
 #import "CBAppDelegate.h"
+#import "CBDataSingleton.h"
+#import "CBCourseModel.h"
 
 @implementation CBAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [Parse setApplicationId:@"gMWKAUUkQCA4GQIf5osPYZxXmPYUGyzLjPHSEt42"
+                  clientKey:@"UOdZ6Goh23LeBX4lFOu1GgBjojOxj6568jO4RAYL"];
+    
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    [PFFacebookUtils initializeFacebook];
+    
     UIPageControl *pageControl = [UIPageControl appearance];
     pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
     pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
     pageControl.backgroundColor = [UIColor whiteColor];
     // Override point for customization after application launch.
+
+    NSArray* _dataArray = @[@[@31152, @"CS 125", @"Intro to Computer Science"],
+                            //@[@39311, @"CS 173", @"Discrete Structures"],
+                            //@[@31208, @"CS 225", @"Data Structures"],
+                            //@[@58541, @"CS 233", @"Computer Architecture"],
+                            //@[@53753, @"CS 241", @"System Programming"],
+                            @[@50142, @"CS 373", @"Theory of Computation"]
+                            ];
+    //not add!! should refresh!
+    CBDataSingleton* sharedData = [CBDataSingleton sharedData];
+    [sharedData.courseList removeAllObjects];
+    for (NSArray* item in _dataArray) {
+        CBCourseModel* course = [[CBCourseModel alloc] initWithCRN:[item[0] integerValue] CID:item[1] Name:item[2] ColorID:0];
+        [sharedData.courseList addObject:course];
+    }
+    
     return YES;
 }
 							
@@ -45,6 +69,10 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication withSession:[PFFacebookUtils session]];
 }
 
 @end

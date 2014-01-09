@@ -18,7 +18,7 @@
 
 @end
 
-@interface CBAddItemViewController : UITableViewController
+@interface CBAddItemViewController : UITableViewController<UITextFieldDelegate>
 
 @property (nonatomic, weak) id<CBAddItemViewControllerDelegate> delegate;
 
