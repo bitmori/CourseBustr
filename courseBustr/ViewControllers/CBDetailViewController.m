@@ -8,69 +8,74 @@
 
 #import "CBDetailViewController.h"
 #import "CBDataSingleton.h"
-#import "CBCourseModel.h"
-#import "CBPageContentViewController.h"
 
 @interface CBDetailViewController ()
+{
+    UIActionSheet* m_sheet;
+    UIActionSheet* m_sheet_ex;
+}
+- (IBAction)onActionButton:(id)sender;
 
 @end
 
 @implementation CBDetailViewController
 
-@synthesize row;
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-    }
-    return self;
-}
+@synthesize courseObj;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.pageContentID = @[@"pageContentInfo", @"pageContentChart", @"pageContentList"];
     
-    self.pageViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"pageViewController"];
-    self.pageViewController.dataSource = self;
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.navigationController.navigationBar.translucent=NO;
+
+    self.title = [[NSString alloc] initWithFormat:@"%@ %@", self.courseObj[@"course_dept"], self.courseObj[@"course_number"]];
     
-    UIViewController* initialPage = [self viewControllerAtIndex:0];
-    NSArray* viewControllers = @[initialPage];
-    [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+    m_sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Edit Course Info", @"Add Course Grades", nil];
+    m_sheet.tag = 501;
     
-    //self.pageViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 30);
-    
-    [self addChildViewController:_pageViewController];
-    [self.view addSubview:_pageViewController.view];
-    [self.pageViewController didMoveToParentViewController:self];
-    
-    CBDataSingleton* sharedData = [CBDataSingleton sharedData];
-    CBCourseModel* course = sharedData.courseList[self.row];
-    self.title = course.CID;
+    m_sheet_ex = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Edit Course Info", @"Add Course Grade", @"Edit Grade List", nil];
+    m_sheet_ex.tag = 502;
 }
 
-- (void)didReceiveMemoryWarning
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [super viewWillAppear:animated];
+    PFQuery* q = [PFQuery queryWithClassName:@"CBCourseGrade"];
+    [q whereKey:@"course_user" equalTo:self.courseObj];
+    [q findObjectsInBackgroundWithBlock:^(NSArray* objects, NSError* error) {
+        if (!error) {
+            CBDataSingleton* sharedData = [CBDataSingleton sharedData];
+            if (sharedData.gradeList) {
+                [sharedData.gradeList removeAllObjects];
+            }
+            [sharedData.gradeList addObjectsFromArray:objects];
+            //[self.tableCourse reloadData];
+        } else {
+            NSString* errString = [[error userInfo] objectForKey:@"error"];
+            NSLog(@"Error!! %@", errString);
+        }
+    }];
+
 }
 
-- (void)editViewControllerDidCancel:(id)controller
+- (void)editCourseViewControllerDidCancel:(CBEditCourseViewController *)controller
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)editViewControllerDidDone:(id)controller withCourseModel:(CBCourseModel *)course
+- (void)editCourseViewControllerDidDone:(CBEditCourseViewController *)controller
 {
-    CBDataSingleton* sharedData = [CBDataSingleton sharedData];
-    CBCourseModel * c = sharedData.courseList[self.row];
-    c.name = course.name;
-    c.CID = course.CID;
-    c.CRN = course.CRN;
-    c.color = course.color;
-    self.title = course.CID;
-    [self.delegate updateCellAtRow:self.row];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)editGradeViewControllerDidCancel:(CBEditGradeViewController *)controller
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)editGradeViewControllerDidDone:(CBEditGradeViewController *)controller
+{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -78,62 +83,46 @@
 {
     if ([segue.identifier isEqualToString:@"editCourse"]) {
         UINavigationController* navController = segue.destinationViewController;
-        CBEditViewController* editController = [[navController viewControllers] objectAtIndex:0];
-        editController.row = self.row;
+        CBEditCourseViewController* editController = [[navController viewControllers] objectAtIndex:0];
+        editController.courseObj = self.courseObj;
+        editController.editMode = YES;
         editController.delegate = self;
     }
-}
-
-- (UIViewController*)viewControllerAtIndex:(NSUInteger)index
-{
-    if (([self.pageContentID count]==0) || (index >= [self.pageContentID count])) {
-        return nil;
+    if ([segue.identifier isEqualToString:@"addGrade"]) {
+        UINavigationController* navController = segue.destinationViewController;
+        CBEditGradeViewController* editGradeController = [[navController viewControllers] objectAtIndex:0];
+        editGradeController.courseObj = self.courseObj;
+        editGradeController.gradeObj = nil;
+        editGradeController.delegate = self;
     }
-    CBPageContentViewController* pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:self.pageContentID[index]];
-    pageContentViewController.pageIndex = index;
-    pageContentViewController.row = self.row;
-    return pageContentViewController;
 }
 
-
-#pragma mark - page View controller data source
-- (UIViewController*)pageViewController:(UIPageViewController *)pageViewController
-     viewControllerBeforeViewController:(UIViewController *)viewController
+- (IBAction)onActionButton:(id)sender
 {
-    NSUInteger index = ((CBPageContentViewController*) viewController).pageIndex;
-    if ((index==0) || (index==NSNotFound)) {
-        return nil;
+    if (self.selectedIndex==2) {
+        [m_sheet_ex showInView:self.view];
+    }else{
+        [m_sheet showInView:self.view];
     }
-    index--;
-    return [self viewControllerAtIndex:index];
 }
 
-- (UIViewController*)pageViewController:(UIPageViewController *)pageViewController
-      viewControllerAfterViewController:(UIViewController *)viewController
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    NSUInteger index = ((CBPageContentViewController*) viewController).pageIndex;
-    if (index==NSNotFound) {
-        return nil;
+    switch (buttonIndex) {
+        case 0:
+            [self performSegueWithIdentifier:@"editCourse" sender:self];
+            break;
+        case 1:
+            [self performSegueWithIdentifier:@"addGrade" sender:self];
+            break;
+        case 2:
+            if (self.selectedIndex==2) {
+                NSLog(@"edit grade list");
+            }
+            break;
+        default:
+            break;
     }
-    
-    index++;
-    
-    if (index==[self.pageContentID count]) {
-        return nil;
-    }
-    
-    return [self viewControllerAtIndex:index];
 }
-
-- (NSInteger)presentationCountForPageViewController:(UIPageViewController *)pageViewController
-{
-    return [self.pageContentID count];
-}
-
-- (NSInteger)presentationIndexForPageViewController:(UIPageViewController *)pageViewController
-{
-    return 0;
-}
-
 
 @end

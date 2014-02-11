@@ -41,6 +41,8 @@
           [UIColor colorWithRed:179/255.0f green:179/255.0f blue:179/255.0f alpha:1]
           ];
         self.userData = nil;
+        self.gradeList = [[NSMutableArray alloc] init];
+        self.courseIndex = 0;
     }
     return self;
 }

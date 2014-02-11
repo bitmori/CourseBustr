@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CBEditViewController.h"
+#import "CBEditGradeViewController.h"
+#import "CBEditCourseViewController.h"
 
 @class CBViewController;
 @protocol CBDetailViewControllerDelegate <NSObject>
@@ -16,14 +17,11 @@
 
 @end
 
-@interface CBDetailViewController : UIViewController<CBEditViewControllerDelegate, UIPageViewControllerDataSource>
 
-@property (weak, nonatomic) id<CBDetailViewControllerDelegate> delegate;
+@interface CBDetailViewController : UITabBarController<CBEditCourseViewControllerDelegate, CBEditGradeViewControllerDelegate, UIActionSheetDelegate>
 
-@property (assign, nonatomic) NSInteger row;
+@property (weak, nonatomic) id<CBDetailViewControllerDelegate> delegate2;
 
-@property (strong, nonatomic) UIPageViewController* pageViewController;
-
-@property (strong, nonatomic) NSArray* pageContentID;
+@property (strong, nonatomic) PFObject* courseObj;
 
 @end

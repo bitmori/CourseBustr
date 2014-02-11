@@ -23,24 +23,8 @@
     UIPageControl *pageControl = [UIPageControl appearance];
     pageControl.pageIndicatorTintColor = [UIColor lightGrayColor];
     pageControl.currentPageIndicatorTintColor = [UIColor blackColor];
-    pageControl.backgroundColor = [UIColor whiteColor];
+    //pageControl.backgroundColor = [UIColor clearColor];
     // Override point for customization after application launch.
-
-    NSArray* _dataArray = @[@[@31152, @"CS 125", @"Intro to Computer Science"],
-                            //@[@39311, @"CS 173", @"Discrete Structures"],
-                            //@[@31208, @"CS 225", @"Data Structures"],
-                            //@[@58541, @"CS 233", @"Computer Architecture"],
-                            //@[@53753, @"CS 241", @"System Programming"],
-                            @[@50142, @"CS 373", @"Theory of Computation"]
-                            ];
-    //not add!! should refresh!
-    CBDataSingleton* sharedData = [CBDataSingleton sharedData];
-    [sharedData.courseList removeAllObjects];
-    for (NSArray* item in _dataArray) {
-        CBCourseModel* course = [[CBCourseModel alloc] initWithCRN:[item[0] integerValue] CID:item[1] Name:item[2] ColorID:0];
-        [sharedData.courseList addObject:course];
-    }
-    
     return YES;
 }
 							

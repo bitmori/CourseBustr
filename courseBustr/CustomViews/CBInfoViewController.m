@@ -7,32 +7,37 @@
 //
 
 #import "CBInfoViewController.h"
-
+#import "CBDetailViewController.h"
 @interface CBInfoViewController ()
+
+@property (weak, nonatomic) IBOutlet UITableViewCell *cellDept;
+@property (weak, nonatomic) IBOutlet UITableViewCell *cellNumber;
+@property (weak, nonatomic) IBOutlet UITableViewCell *cellName;
+@property (weak, nonatomic) IBOutlet UITableViewCell *cellGoal;
+@property (weak, nonatomic) IBOutlet UITableViewCell *cellCurrent;
+@property (weak, nonatomic) IBOutlet UITableViewCell *cellProgress;
 
 @end
 
 @implementation CBInfoViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //NSLog(@"this is %@", [self class]);
+    CBDetailViewController* parent = (CBDetailViewController*)(self.parentViewController);
+    self.courseObj = parent.courseObj;
+    [self.cellDept.textLabel setText:self.courseObj[@"course_dept"]];
+    [self.cellNumber.textLabel setText:[self.courseObj[@"course_number"] stringValue]];
+    [self.cellName.textLabel setText:self.courseObj[@"course_name"]];
+    [self.cellGoal.textLabel setText:[NSString stringWithFormat:@"%d %%", [self.courseObj[@"goal"] integerValue]]];
+    [self.cellCurrent.textLabel setText:[self.courseObj[@"curr"] stringValue]];
+    [self.cellProgress.textLabel setText:[self.courseObj[@"prog"] stringValue]];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [super viewWillAppear:animated];
+
 }
 
 @end

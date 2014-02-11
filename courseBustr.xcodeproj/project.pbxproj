@@ -22,6 +22,12 @@
 		4A400F8E187DCC4C005C3303 /* CBUserRoundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A400F8D187DCC4C005C3303 /* CBUserRoundImage.m */; };
 		4A400F91187E23CA005C3303 /* CBCommonUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A400F90187E23CA005C3303 /* CBCommonUtils.m */; };
 		4A400F95187E270A005C3303 /* CBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A400F94187E270A005C3303 /* CBLoginViewController.m */; };
+		4A400F9B187EC050005C3303 /* CBSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A400F9A187EC050005C3303 /* CBSearchViewController.m */; };
+		4A400F9F188098FD005C3303 /* CBEditGradeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A400F9E188098FD005C3303 /* CBEditGradeViewController.m */; };
+		4A400FA21880F650005C3303 /* CBGradeTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A400FA11880F650005C3303 /* CBGradeTypeViewController.m */; };
+		4A400FAE18842335005C3303 /* TMCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A400FA918842335005C3303 /* TMCache.m */; };
+		4A400FAF18842335005C3303 /* TMDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A400FAB18842335005C3303 /* TMDiskCache.m */; };
+		4A400FB018842335005C3303 /* TMMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A400FAD18842335005C3303 /* TMMemoryCache.m */; };
 		4A9A532F186F433D0067F415 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9A532E186F433D0067F415 /* Foundation.framework */; };
 		4A9A5331186F433D0067F415 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9A5330186F433D0067F415 /* CoreGraphics.framework */; };
 		4A9A5333186F433D0067F415 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9A5332186F433D0067F415 /* UIKit.framework */; };
@@ -37,11 +43,9 @@
 		4A9A535A186F433D0067F415 /* courseBustrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9A5359186F433D0067F415 /* courseBustrTests.m */; };
 		4A9A5366186F45A00067F415 /* CBCourseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9A5365186F45A00067F415 /* CBCourseModel.m */; };
 		4A9A5369186F48440067F415 /* CBDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A9A5368186F48440067F415 /* CBDetailViewController.m */; };
-		4AA13759186FEC520054E742 /* CBAddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA13758186FEC520054E742 /* CBAddItemViewController.m */; };
-		4AA1375C187016670054E742 /* CBEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA1375B187016670054E742 /* CBEditViewController.m */; };
+		4AA13759186FEC520054E742 /* CBEditCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA13758186FEC520054E742 /* CBEditCourseViewController.m */; };
 		4AA1375F18709E180054E742 /* CBDataSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA1375E18709E180054E742 /* CBDataSingleton.m */; };
 		4AA137631871FE750054E742 /* CBCircleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AA137621871FE750054E742 /* CBCircleButton.m */; };
-		4AC095701877A14C00D18DC0 /* CBPageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC0956F1877A14C00D18DC0 /* CBPageContentViewController.m */; };
 		4AC095731877AAED00D18DC0 /* CBInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC095721877AAED00D18DC0 /* CBInfoViewController.m */; };
 		4AC095761877AAF700D18DC0 /* CBChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC095751877AAF700D18DC0 /* CBChartViewController.m */; };
 		4AC095791877AAFF00D18DC0 /* CBListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC095781877AAFF00D18DC0 /* CBListViewController.m */; };
@@ -84,6 +88,18 @@
 		4A400F90187E23CA005C3303 /* CBCommonUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBCommonUtils.m; sourceTree = "<group>"; };
 		4A400F93187E270A005C3303 /* CBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBLoginViewController.h; sourceTree = "<group>"; };
 		4A400F94187E270A005C3303 /* CBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBLoginViewController.m; sourceTree = "<group>"; };
+		4A400F99187EC050005C3303 /* CBSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBSearchViewController.h; sourceTree = "<group>"; };
+		4A400F9A187EC050005C3303 /* CBSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBSearchViewController.m; sourceTree = "<group>"; };
+		4A400F9D188098FD005C3303 /* CBEditGradeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBEditGradeViewController.h; sourceTree = "<group>"; };
+		4A400F9E188098FD005C3303 /* CBEditGradeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBEditGradeViewController.m; sourceTree = "<group>"; };
+		4A400FA01880F650005C3303 /* CBGradeTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBGradeTypeViewController.h; sourceTree = "<group>"; };
+		4A400FA11880F650005C3303 /* CBGradeTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBGradeTypeViewController.m; sourceTree = "<group>"; };
+		4A400FA818842335005C3303 /* TMCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMCache.h; sourceTree = "<group>"; };
+		4A400FA918842335005C3303 /* TMCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMCache.m; sourceTree = "<group>"; };
+		4A400FAA18842335005C3303 /* TMDiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMDiskCache.h; sourceTree = "<group>"; };
+		4A400FAB18842335005C3303 /* TMDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMDiskCache.m; sourceTree = "<group>"; };
+		4A400FAC18842335005C3303 /* TMMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TMMemoryCache.h; sourceTree = "<group>"; };
+		4A400FAD18842335005C3303 /* TMMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TMMemoryCache.m; sourceTree = "<group>"; };
 		4A9A532B186F433D0067F415 /* courseBustr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = courseBustr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A9A532E186F433D0067F415 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4A9A5330186F433D0067F415 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -106,16 +122,12 @@
 		4A9A5365186F45A00067F415 /* CBCourseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBCourseModel.m; sourceTree = "<group>"; };
 		4A9A5367186F48440067F415 /* CBDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBDetailViewController.h; sourceTree = "<group>"; };
 		4A9A5368186F48440067F415 /* CBDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBDetailViewController.m; sourceTree = "<group>"; };
-		4AA13757186FEC520054E742 /* CBAddItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBAddItemViewController.h; sourceTree = "<group>"; };
-		4AA13758186FEC520054E742 /* CBAddItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBAddItemViewController.m; sourceTree = "<group>"; };
-		4AA1375A187016670054E742 /* CBEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBEditViewController.h; sourceTree = "<group>"; };
-		4AA1375B187016670054E742 /* CBEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBEditViewController.m; sourceTree = "<group>"; };
+		4AA13757186FEC520054E742 /* CBEditCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBEditCourseViewController.h; sourceTree = "<group>"; };
+		4AA13758186FEC520054E742 /* CBEditCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBEditCourseViewController.m; sourceTree = "<group>"; };
 		4AA1375D18709E180054E742 /* CBDataSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBDataSingleton.h; path = ../CBDataSingleton.h; sourceTree = "<group>"; };
 		4AA1375E18709E180054E742 /* CBDataSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBDataSingleton.m; path = ../CBDataSingleton.m; sourceTree = "<group>"; };
 		4AA137611871FE750054E742 /* CBCircleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBCircleButton.h; sourceTree = "<group>"; };
 		4AA137621871FE750054E742 /* CBCircleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBCircleButton.m; sourceTree = "<group>"; };
-		4AC0956E1877A14C00D18DC0 /* CBPageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBPageContentViewController.h; path = ../CustomViews/CBPageContentViewController.h; sourceTree = "<group>"; };
-		4AC0956F1877A14C00D18DC0 /* CBPageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBPageContentViewController.m; path = ../CustomViews/CBPageContentViewController.m; sourceTree = "<group>"; };
 		4AC095711877AAED00D18DC0 /* CBInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBInfoViewController.h; path = ../CustomViews/CBInfoViewController.h; sourceTree = "<group>"; };
 		4AC095721877AAED00D18DC0 /* CBInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CBInfoViewController.m; path = ../CustomViews/CBInfoViewController.m; sourceTree = "<group>"; };
 		4AC095741877AAF700D18DC0 /* CBChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CBChartViewController.h; path = ../CustomViews/CBChartViewController.h; sourceTree = "<group>"; };
@@ -173,8 +185,6 @@
 		4A400F89187B56FA005C3303 /* PageContentViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4AC0956E1877A14C00D18DC0 /* CBPageContentViewController.h */,
-				4AC0956F1877A14C00D18DC0 /* CBPageContentViewController.m */,
 				4AC095711877AAED00D18DC0 /* CBInfoViewController.h */,
 				4AC095721877AAED00D18DC0 /* CBInfoViewController.m */,
 				4AC095741877AAF700D18DC0 /* CBChartViewController.h */,
@@ -188,10 +198,44 @@
 		4A400F92187E26F2005C3303 /* UserViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4AC095881878BA8E00D18DC0 /* CBRevealMenuViewController.h */,
+				4AC095891878BA8E00D18DC0 /* CBRevealMenuViewController.m */,
 				4A400F93187E270A005C3303 /* CBLoginViewController.h */,
 				4A400F94187E270A005C3303 /* CBLoginViewController.m */,
+				4AC0958B1878E02C00D18DC0 /* CBProfileViewController.h */,
+				4AC0958C1878E02C00D18DC0 /* CBProfileViewController.m */,
+				4AC0958F1878E3EC00D18DC0 /* CBSettingViewController.h */,
+				4AC095901878E3EC00D18DC0 /* CBSettingViewController.m */,
 			);
 			name = UserViewController;
+			sourceTree = "<group>";
+		};
+		4A400F9C188098DD005C3303 /* EditViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4A400F99187EC050005C3303 /* CBSearchViewController.h */,
+				4A400F9A187EC050005C3303 /* CBSearchViewController.m */,
+				4AA13757186FEC520054E742 /* CBEditCourseViewController.h */,
+				4AA13758186FEC520054E742 /* CBEditCourseViewController.m */,
+				4A400F9D188098FD005C3303 /* CBEditGradeViewController.h */,
+				4A400F9E188098FD005C3303 /* CBEditGradeViewController.m */,
+				4A400FA01880F650005C3303 /* CBGradeTypeViewController.h */,
+				4A400FA11880F650005C3303 /* CBGradeTypeViewController.m */,
+			);
+			name = EditViewController;
+			sourceTree = "<group>";
+		};
+		4A400FA718842335005C3303 /* TMCache */ = {
+			isa = PBXGroup;
+			children = (
+				4A400FA818842335005C3303 /* TMCache.h */,
+				4A400FA918842335005C3303 /* TMCache.m */,
+				4A400FAA18842335005C3303 /* TMDiskCache.h */,
+				4A400FAB18842335005C3303 /* TMDiskCache.m */,
+				4A400FAC18842335005C3303 /* TMMemoryCache.h */,
+				4A400FAD18842335005C3303 /* TMMemoryCache.m */,
+			);
+			path = TMCache;
 			sourceTree = "<group>";
 		};
 		4A9A5322186F433D0067F415 = {
@@ -296,19 +340,13 @@
 		4A9A536A186F527D0067F415 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4A400F9C188098DD005C3303 /* EditViewController */,
 				4A400F92187E26F2005C3303 /* UserViewController */,
 				4A400F89187B56FA005C3303 /* PageContentViewController */,
-				4AC0958E1878E3C600D18DC0 /* MiscViewController */,
-				4AC095881878BA8E00D18DC0 /* CBRevealMenuViewController.h */,
-				4AC095891878BA8E00D18DC0 /* CBRevealMenuViewController.m */,
 				4A9A5343186F433D0067F415 /* CBViewController.h */,
 				4A9A5344186F433D0067F415 /* CBViewController.m */,
 				4A9A5367186F48440067F415 /* CBDetailViewController.h */,
 				4A9A5368186F48440067F415 /* CBDetailViewController.m */,
-				4AA13757186FEC520054E742 /* CBAddItemViewController.h */,
-				4AA13758186FEC520054E742 /* CBAddItemViewController.m */,
-				4AA1375A187016670054E742 /* CBEditViewController.h */,
-				4AA1375B187016670054E742 /* CBEditViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -329,23 +367,13 @@
 		4AC095841878B16500D18DC0 /* ExLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				4A400FA718842335005C3303 /* TMCache */,
 				4AC095851878B18800D18DC0 /* SWRevealViewController.h */,
 				4AC095861878B18800D18DC0 /* SWRevealViewController.m */,
 				4A400F8F187E23CA005C3303 /* CBCommonUtils.h */,
 				4A400F90187E23CA005C3303 /* CBCommonUtils.m */,
 			);
 			path = ExLibrary;
-			sourceTree = "<group>";
-		};
-		4AC0958E1878E3C600D18DC0 /* MiscViewController */ = {
-			isa = PBXGroup;
-			children = (
-				4AC0958B1878E02C00D18DC0 /* CBProfileViewController.h */,
-				4AC0958C1878E02C00D18DC0 /* CBProfileViewController.m */,
-				4AC0958F1878E3EC00D18DC0 /* CBSettingViewController.h */,
-				4AC095901878E3EC00D18DC0 /* CBSettingViewController.m */,
-			);
-			name = MiscViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -482,24 +510,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AC095791877AAFF00D18DC0 /* CBListViewController.m in Sources */,
-				4AA1375C187016670054E742 /* CBEditViewController.m in Sources */,
+				4A400FB018842335005C3303 /* TMMemoryCache.m in Sources */,
 				4AC095731877AAED00D18DC0 /* CBInfoViewController.m in Sources */,
+				4A400F9B187EC050005C3303 /* CBSearchViewController.m in Sources */,
 				4A400F95187E270A005C3303 /* CBLoginViewController.m in Sources */,
-				4AA13759186FEC520054E742 /* CBAddItemViewController.m in Sources */,
+				4AA13759186FEC520054E742 /* CBEditCourseViewController.m in Sources */,
 				4A9A533B186F433D0067F415 /* main.m in Sources */,
 				4A400F91187E23CA005C3303 /* CBCommonUtils.m in Sources */,
 				4AC095761877AAF700D18DC0 /* CBChartViewController.m in Sources */,
+				4A400FAF18842335005C3303 /* TMDiskCache.m in Sources */,
+				4A400FAE18842335005C3303 /* TMCache.m in Sources */,
 				4AA137631871FE750054E742 /* CBCircleButton.m in Sources */,
 				4AC095871878B18800D18DC0 /* SWRevealViewController.m in Sources */,
-				4AC095701877A14C00D18DC0 /* CBPageContentViewController.m in Sources */,
 				4A400F8E187DCC4C005C3303 /* CBUserRoundImage.m in Sources */,
 				4AC0958D1878E02C00D18DC0 /* CBProfileViewController.m in Sources */,
 				4A9A5366186F45A00067F415 /* CBCourseModel.m in Sources */,
+				4A400FA21880F650005C3303 /* CBGradeTypeViewController.m in Sources */,
 				4A9A5369186F48440067F415 /* CBDetailViewController.m in Sources */,
 				4AC095911878E3EC00D18DC0 /* CBSettingViewController.m in Sources */,
 				4A9A533F186F433D0067F415 /* CBAppDelegate.m in Sources */,
 				4AA1375F18709E180054E742 /* CBDataSingleton.m in Sources */,
 				4AC0958A1878BA8E00D18DC0 /* CBRevealMenuViewController.m in Sources */,
+				4A400F9F188098FD005C3303 /* CBEditGradeViewController.m in Sources */,
 				4A9A5345186F433D0067F415 /* CBViewController.m in Sources */,
 				4A400F72187A7CD0005C3303 /* CBCircleButtonWithLabel.m in Sources */,
 			);

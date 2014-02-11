@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Pyrus. All rights reserved.
 //
 
-#import "CBPageContentViewController.h"
+@interface CBInfoViewController : UITableViewController
 
-@interface CBInfoViewController : CBPageContentViewController
+@property (strong, nonatomic) PFObject* courseObj;
 
 @end

@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CBAddItemViewController.h"
+#import "CBSearchViewController.h"
+#import "CBEditCourseViewController.h"
 #import "CBDetailViewController.h"
 
-@interface CBViewController : UIViewController<UITableViewDelegate, UIActionSheetDelegate, UITableViewDataSource, CBAddItemViewControllerDelegate, CBDetailViewControllerDelegate>
+
+@interface CBViewController : UIViewController<UITableViewDelegate, UIActionSheetDelegate, UITableViewDataSource, CBDetailViewControllerDelegate, CBSearchViewControllerDelegate, CBEditCourseViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableCourse;
 
 @end
